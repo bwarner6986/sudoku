@@ -79,5 +79,5 @@ class SudokuGame
 end
 
 
-game = SudokuGame.from_file("puzzles/sudoku0.txt")
+game = SudokuGame.from_file(["puzzles/sudoku1.txt", "puzzles/sudoku2.txt","puzzles/sudoku3.txt"].sample)
 game.run
