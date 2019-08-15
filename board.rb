@@ -1,10 +1,9 @@
+require "byebug"
 require_relative "tile"
 
 class Board
   def self.empty_grid
-    Array.new(9) do
-      Array.new(9) { Tile.new(0) }
-    end
+    Array.new(9) { Array.new(9) {Tile.new(0) } }  
   end
 
   def self.from_file(filename)
@@ -28,6 +27,7 @@ class Board
 
   def []=(pos, value)
     x, y = pos
+    # debugger
     tile = grid[x][y]
     tile.value = value
   end
